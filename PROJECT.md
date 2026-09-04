@@ -11,8 +11,9 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - ESP32
 - MPU6050
 - Servo motorlar
-- ESC
-- Brushless motorlar
+- Buzzer
+- RGB led
+- BMP280
 
 ## Şu Ana Kadar Yapılanlar
 
@@ -20,22 +21,22 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - MPU6050 bağlandı.
 - MPU6050'den sensör verileri okunuyor.
 - Eksen yönleri kontrol edildi.
+- İvme ve Gyro değerleri birleştirilerek PID için işe yarar veriler elde edildi.
 
 ## Şu Anki Aşama
 
-MPU6050 sensör aşaması.
+BMP280 kullanarak basınç ve irtifa verisi elde etmek.
 
 ## Sonraki Aşama
 
-BMP280 kullanarak basınç ve irtifa verisi elde etmek.
+Kumanda alıcısı ile kumanda komut göndeebilmek.
 
 ## Daha Sonraki Aşamalar
 
-1. BMP280
-2. Sensör verilerinin filtrelenmesi
-3. Roll / Pitch hesaplama
-4. PID stabilizasyon
-5. Servo kontrolü
+
+1. Servo kontrolü
+2. PID kodlamaya giriş
+4. PID stabilizasyon ve tekli fırçasız motorlu düzenek ile test.
 6. GPS
 7. Telemetri
 8. Java takip uygulaması
@@ -43,4 +44,4 @@ BMP280 kullanarak basınç ve irtifa verisi elde etmek.
 
 ## Proje Durumu
 
-Geliştirme aşamasında.
+Bmo280 irtifa verisi üzerine geliştirmeler devam ediyor.
