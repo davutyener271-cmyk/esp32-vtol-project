@@ -14,6 +14,7 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - Buzzer
 - RGB led
 - BMP280
+- FlySky-i6x ve 10 kanallı alıcısı
 
 ## Şu Ana Kadar Yapılanlar
 
@@ -22,14 +23,15 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - MPU6050'den sensör verileri okunuyor.
 - Eksen yönleri kontrol edildi.
 - İvme ve Gyro değerleri birleştirilerek PID için işe yarar veriler elde edildi.
+- BMP280 ile irtifa, sıcaklık ve basınç bilgileri elde edildi.
 
 ## Şu Anki Aşama
 
-BMP280 kullanarak basınç ve irtifa verisi elde etmek.
+Kumanda alıcısı ile kumanda komut göndeebilmek.
 
 ## Sonraki Aşama
 
-Kumanda alıcısı ile kumanda komut göndeebilmek.
+Arm-Disarm özelliği eklemek.
 
 ## Daha Sonraki Aşamalar
 
@@ -44,4 +46,4 @@ Kumanda alıcısı ile kumanda komut göndeebilmek.
 
 ## Proje Durumu
 
-Bmo280 irtifa verisi üzerine geliştirmeler devam ediyor.
+Alıcı ile kumanda komutlarını sisteme ekleme üzerinde çalışılıyor.
