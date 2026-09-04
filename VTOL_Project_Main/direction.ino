@@ -10,4 +10,12 @@ void calculate_Direction(float dt) {
   Filtered_Pitch = 0.95 * (Filtered_Pitch + gyro_Pitch * dt) + 0.05 * ac_Pitch;
   Filtered_Roll = 0.95 * (Filtered_Roll + gyro_Roll * dt) + 0.05 * ac_Roll;
 
+  Serial.print("Pitch: ");
+  Serial.print(Filtered_Pitch);
+  Serial.print("  |  ");
+  Serial.print("Roll: ");
+  Serial.print(Filtered_Roll);
+  Serial.print("  |  ");
+  Serial.print("Gyro Z: ");
+  Serial.println(gyro_Yaw);
 }
