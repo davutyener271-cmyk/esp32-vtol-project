@@ -15,6 +15,7 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - RGB led
 - BMP280
 - FlySky-i6x ve 10 kanallı alıcısı
+- Fırçasız motor
 
 ## Şu Ana Kadar Yapılanlar
 
@@ -24,26 +25,25 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - Eksen yönleri kontrol edildi.
 - İvme ve Gyro değerleri birleştirilerek PID için işe yarar veriler elde edildi.
 - BMP280 ile irtifa, sıcaklık ve basınç bilgileri elde edildi.
+- Alıcı ile kumandadan komut gönderme, arm ve failsafe modları eklendi.
 
 ## Şu Anki Aşama
 
-Kumanda alıcısı ile kumanda komut göndeebilmek.
+Servoları ve Fırçasız motoru kontrol etmek (Şuan sistemde 1 adet fırçasız motor bulunuyor(A2212 1400KV). )
 
 ## Sonraki Aşama
 
-Arm-Disarm özelliği eklemek.
+Fırçasız motoru PID kontrolü yapılabilecek bir düzeneğe sabitlemek.
 
 ## Daha Sonraki Aşamalar
 
-
-1. Servo kontrolü
-2. PID kodlamaya giriş
-4. PID stabilizasyon ve tekli fırçasız motorlu düzenek ile test.
-6. GPS
-7. Telemetri
-8. Java takip uygulaması
-9. Otonom uçuş sistemi
+1. PID kodlamaya giriş
+2. PID stabilizasyon ve tekli fırçasız motorlu düzenek ile test.
+3. GPS
+4. Telemetri
+5. Java takip uygulaması
+6. Otonom uçuş sistemi
 
 ## Proje Durumu
 
-Alıcı ile kumanda komutlarını sisteme ekleme üzerinde çalışılıyor.
+Servolar ve fırçasız motor kontrolü üzerine geliştirmeler devam ediyor...
