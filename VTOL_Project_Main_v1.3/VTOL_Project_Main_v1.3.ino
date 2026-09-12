@@ -1,4 +1,5 @@
 #include <Wire.h>
+#include <ESP32Servo.h>
 
 HardwareSerial iBusSerial(2);
 
@@ -45,6 +46,11 @@ float throttleCommand = 0.0f;
 int16_t AcX, AcY, AcZ, GyX, GyY, GyZ, Tmp;
 uint16_t iBusChannels[14] = { 0 };
 
+Servo leftTailServo;
+Servo rightTailServo;
+const int LEFT_TAIL_SERVO_PIN = 13;
+const int RIGHT_TAIL_SERVO_PIN = 14;
+
 const int pinRed = 33;
 const int pinGreen = 32;
 const int pinBlue = 15;
@@ -54,6 +60,7 @@ const int SCL_PIN = 22;
 const int MPU_addr = 0x68;
 const uint8_t BMP_addr = 0x76;
 const int IBUS_RX_PIN = 4;
+
 
 void setup() {
 
@@ -67,23 +74,25 @@ void setup() {
   pinMode(pinBlue, OUTPUT);
 
   // Başlangıç Melodisi
-  tone(pinBuzzer, 2000);
+  //tone(pinBuzzer, 2000);
   statusLedGreenOpen();
   delay(70);
-  noTone(pinBuzzer);
+  //noTone(pinBuzzer);
   statusLedGreenClose();
   delay(40);
-  tone(pinBuzzer, 2000);
+  // tone(pinBuzzer, 2000);
   statusLedGreenOpen();
   delay(150);
-  noTone(pinBuzzer);
+  // noTone(pinBuzzer);
   statusLedGreenClose();
   delay(70);
-  tone(pinBuzzer, 2250);
+  // tone(pinBuzzer, 2250);
   statusLedGreenOpen();
   delay(400);
-  noTone(pinBuzzer);
+  // noTone(pinBuzzer);
   statusLedGreenClose();
+
+
 
   Wire.begin(SDA_PIN, SCL_PIN);
   Wire.setClock(100000);
@@ -156,6 +165,8 @@ void setup() {
   noTone(pinBuzzer);
   statusLedBlueClose();
 
+  //initialize_Servos();
+
   lastTime = millis();
   lastBMPTime = lastTime;
   lastSerialTime = lastTime;
@@ -171,13 +182,13 @@ void loop() {
   update_Arm();
 
   if (!rcFailsafeActive) {
-  calculate_RC_Commands();
-} else {
-  rollCommand = 0.0f;
-  pitchCommand = 0.0f;
-  yawCommand = 0.0f;
-  throttleCommand = 0.0f;
-}
+    calculate_RC_Commands();
+  } else {
+    rollCommand = 0.0f;
+    pitchCommand = 0.0f;
+    yawCommand = 0.0f;
+    throttleCommand = 0.0f;
+  }
 
   if (ledIsOn == false && currentTime - lastLedTime >= 2000) {
     statusLedRedOpen();
