@@ -9,13 +9,16 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 ## Mevcut Donanım
 
 - ESP32
-- MPU6050
+- LSM6DS3
 - Servo motorlar
 - Buzzer
 - RGB led
 - BMP280
 - FlySky-i6x ve 10 kanallı alıcısı
-- Fırçasız motor
+- Fırçasız motor (geçici olarak A2212 1400KV)
+- Esc (40a geçici)
+- Voltaj düşürücü
+- Lipo batarya (3s geçici)
 
 ## Şu Ana Kadar Yapılanlar
 
@@ -26,14 +29,15 @@ ve kontrollü otonom uçuş özellikleri geliştirmek.
 - İvme ve Gyro değerleri birleştirilerek PID için işe yarar veriler elde edildi.
 - BMP280 ile irtifa, sıcaklık ve basınç bilgileri elde edildi.
 - Alıcı ile kumandadan komut gönderme, arm ve failsafe modları eklendi.
+- İlkel seviyede servo kontrolleri eklendi.
 
 ## Şu Anki Aşama
 
-Servoları ve Fırçasız motoru kontrol etmek (Şuan sistemde 1 adet fırçasız motor bulunuyor(A2212 1400KV). )
+...
 
 ## Sonraki Aşama
 
-Fırçasız motoru PID kontrolü yapılabilecek bir düzeneğe sabitlemek.
+...
 
 ## Daha Sonraki Aşamalar
 
@@ -46,4 +50,3 @@ Fırçasız motoru PID kontrolü yapılabilecek bir düzeneğe sabitlemek.
 
 ## Proje Durumu
 
-Servolar ve fırçasız motor kontrolü üzerine geliştirmeler devam ediyor...
